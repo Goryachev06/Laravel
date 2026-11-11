@@ -1,0 +1,48 @@
+
+@use 'variables' as *;
+
+@import '~bootstrap/scss/bootstrap';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-navbar {
+  background-color: $headerBack;
+}
+
+.custom-card {
+  border-radius: 25px;
+  overflow: hidden; 
+
+
+
+  .card-img-top {
+    height: 250px;
+    object-fit: cover; 
+  }
+}
+
+@for $i from 1 through 5 {
+  $color: nth($borderColor, $i);
+  @if $i < 5 {
+    .row > div:nth-child(5n + #{$i}) .custom-card {
+      border: 3px solid $color;
+    }
+  } @else {
+    .row > div:nth-child(5n) .custom-card {
+      border: 3px solid $color;
+    }
+  }
+}
+
+@keyframes custom-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.fa-spin-custom {
+  animation: custom-spin 2s linear infinite;
+  color: $secondMainBack;
+}
