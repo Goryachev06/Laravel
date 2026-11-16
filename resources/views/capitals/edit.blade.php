@@ -13,6 +13,8 @@
                 <form action="{{ route('capitals.update', $capital) }}" 
                       method="POST" 
                       enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
                     @include('capitals._form', ['submitText' => 'Обновить'])
                 </form>
             </div>

@@ -11,7 +11,7 @@
     <nav class="navbar navbar-dark custom-navbar">
         <div class="container">
             <a href="{{ route('capitals.index') }}" class="navbar-brand text-white">
-                <i class="fas fa-arrow-left me-2"></i> Назад
+                Назад
             </a>
         </div>
     </nav>
